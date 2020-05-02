@@ -17,24 +17,22 @@ public class Main {
 		for (int i = 0; i < skill_trees.length; i++) {
 			boolean flag = true;
 			String nowTree = skill_trees[i];
-			String front ="", back = "";
+			String front = "";
 			for (int j = 0; j < skill.length(); j++) {
 				char sk = skill.charAt(j);
 				int index = nowTree.indexOf(sk);
-				
-				if(front.contains(String.valueOf(sk))) {
+
+				if (front.contains(String.valueOf(sk))) {
 					flag = false;
 					break;
 				}
-				if(index == -1) {
+				if (index == -1) {
 					front = nowTree;
 				} else {
-					
 					front = nowTree.substring(0, index);
-					back = nowTree.substring(index + 1);
 				}
 			}
-			if(flag) {
+			if (flag) {
 				answer++;
 			}
 		}
