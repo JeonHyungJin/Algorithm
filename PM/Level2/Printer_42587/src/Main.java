@@ -28,9 +28,9 @@ public class Main {
 			int priority = print.priority;
 
 			// 큰 수가 있나 찾아보기
-			if (check(priority))
+			if (check(priority)) {
 				queue.offer(print);
-			else {
+			} else {
 				order[j] = print.index;
 				j++;
 			}
