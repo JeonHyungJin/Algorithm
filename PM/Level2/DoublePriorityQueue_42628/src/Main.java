@@ -8,7 +8,6 @@ public class Main {
 
 		int[] answer = solution(operations);
 		System.out.println(answer[0]);
-
 		System.out.println(answer[1]);
 	}
 
