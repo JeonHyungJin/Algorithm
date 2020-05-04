@@ -5,9 +5,15 @@ public class Main {
 		// TODO Auto-generated method stub
 //		int[][] picture = { { 1, 1, 1, 0 }, { 1, 2, 2, 0 }, { 1, 0, 0, 1 }, { 0, 0, 0, 1 }, { 0, 0, 0, 3 },
 //				{ 0, 0, 0, 3 } };
+		int[][] test = new int[100][100];
+		for (int i = 0; i < 100; i++) {
+			for (int j = 0; j < 100; j++) {
+				test[i][j] = 1;
+			}
+		}
 		int[][] picture = { { 0, 1, 0, 0 }, { 1, 1, 0, 0 }, { 0, 1, 0, 0 } };
 
-		int[] res = solution(picture.length, picture[0].length, picture);
+		int[] res = solution(test.length, test[0].length, test);
 		System.out.println(res[0]);
 		System.out.println(res[1]);
 	}
@@ -18,12 +24,6 @@ public class Main {
 		int numberOfArea = 0;
 		int maxSizeOfOneArea = 0;
 		int[] answer = new int[2];
-
-		if (m == 0 || n == 0) {
-			answer[0] = numberOfArea;
-			answer[1] = maxSizeOfOneArea;
-			return answer;
-		}
 
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
