@@ -47,7 +47,7 @@ public class Main {
 
 	public static void bfs2(int start) {
 		int[] distance = new int[dfsArr.length];
-		parent = new int[dfsArr.length]; // BFS 스패닝 트리에서 i의 부모의 번호
+		parent = new int[dfsArr.length];
 		Arrays.fill(distance, -1);
 		Arrays.fill(parent, -1);
 
@@ -67,7 +67,6 @@ public class Main {
 				}
 			}
 		}
-		System.out.println(Arrays.toString(distance));
 	}
 
 	public static LinkedList<Integer> shortestPath(int v, int[] parent) {
